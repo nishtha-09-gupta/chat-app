@@ -10,7 +10,7 @@ import HelpPage from './pages/HelpPage';
 const App = () => {
   const { authUser } = useContext(AuthContext)
   return (
-    <div className="bg-[url('/bgImage.svg')] bg-contain">
+    <div className="min-h-screen bg-gradient-to-b from-violet-900/90 to-black text-white flex flex-col">
       <Toaster/>
       <Routes>
         <Route path='/' element={authUser ? <HomePage /> : <Navigate to="/login" />}/>
