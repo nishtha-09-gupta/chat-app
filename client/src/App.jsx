@@ -7,6 +7,8 @@ import {Toaster} from "react-hot-toast"
 import { AuthContext } from '../context/AuthContext'
 import HelpPage from './pages/HelpPage';
 
+import AIChat from "./pages/AIChat";
+
 const App = () => {
   const { authUser } = useContext(AuthContext)
   return (
@@ -17,6 +19,7 @@ const App = () => {
         <Route path='/login' element={!authUser ? <LoginPage /> : <Navigate to="/" />}/>
         <Route path='/profile' element={authUser ? <ProfilePage /> : <Navigate to="/login" />}/>
         <Route path="/help" element={<HelpPage />} />
+        <Route path="/ai" element={<AIChat />} />
       </Routes>
     </div>
   )

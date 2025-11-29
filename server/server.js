@@ -6,6 +6,7 @@ import { connectDB } from "./lib/db.js";
 import userRouter from "./routes/userRoutes.js";
 import messageRouter from "./routes/messageRoutes.js";
 import { Server } from "socket.io";
+import aiRoutes from "./routes/aiRoutes.js";
 
 
 const app = express();
@@ -39,7 +40,7 @@ app.use(express.json({limit: "4mb"}));
 app.use(cors());
 
 
-
+app.use("/api/ai", aiRoutes);
 app.use("/api/status", (req, res)=> res.send("Server is live"));
 app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter)
