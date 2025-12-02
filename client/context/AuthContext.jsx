@@ -47,8 +47,6 @@ const login = async (state, credentials)=>{
     }
 }
 
-
-
     const logout = async () =>{
         localStorage.removeItem("token");
         setToken(null);
