@@ -73,7 +73,12 @@ const ChatContainer = () => {
                 {msg.image ? (
                     <img src={msg.image} alt="" className='max-w-[230px] border border-gray-700 rounded-lg overflow-hidden mb-8'/>
                 ):(
-                    <p className={`p-2 max-w-[200px] md:text-sm font-light rounded-lg mb-8 break-all bg-violet-500/30 text-white ${msg.senderId === authUser._id ? 'rounded-br-none' : 'rounded-bl-none'}`}>{msg.text}</p>
+                    <p className={`px-4 py-2 max-w-[240px] text-sm rounded-2xl mb-6 break-words shadow-lg
+                        ${
+                          msg.senderId === authUser._id
+                            ? "bg-violet-600/20 text-white rounded-br-md"
+                            : "bg-[#1C1635] text-gray-100 rounded-bl-md"
+                        }`}>{msg.text}</p>
                 )}
                 <div className="text-center text-xs">
                     <img src={msg.senderId === authUser._id ? authUser?.profilePic || assets.avatar_icon : selectedUser?.profilePic || assets.avatar_icon} alt="" className='w-7 rounded-full' />
@@ -85,7 +90,8 @@ const ChatContainer = () => {
       </div>
 
 
-    <div className='absolute bottom-0 left-0 right-0 flex items-center gap-3 p-3'>
+      <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 bg-[#141028]/80 backdrop-blur-xl px-4 py-3 rounded-full shadow-xl">
+
         <div className='flex-1 flex items-center bg-gray-100/12 px-3 rounded-full'>
             <input onChange={(e)=> setInput(e.target.value)} value={input} onKeyDown={(e)=> e.key === "Enter" ? handleSendMessage(e) : null} type="text" placeholder="Send a message" 
             className='flex-1 text-sm p-3 border-none rounded-lg outline-none text-white placeholder-gray-400'/>

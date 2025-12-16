@@ -1,4 +1,4 @@
-Yapster - A Real Time Chat Application
+Yapster: A Real Time Chat Application
 
 Yapster is a real time chat application built with the MERN stack. It allows users to sign up, log in, update their profile, and chat with other users instantly.
 
@@ -10,35 +10,35 @@ Seamless real-time messaging
 
 Secure user authentication
 
-Online/offline user status
+Online and offline user status
 
 Profile management
 
 System Architecture
 
-Frontend → Backend (API) → Database → Real-Time Communication
+Frontend → Backend API → Database → Real-Time Communication
 
-Frontend: React.js + Tailwind CSS + React Router
+Frontend: React.js, Tailwind CSS, React Router
 
-Backend: Node.js + Express.js
+Backend: Node.js, Express.js
 
 Database: MongoDB Atlas
 
-Authentication: JWT-based login/signup
+Authentication: JWT-based login and signup
 
 Real-Time Communication: Socket.io
 
-Hosting: Vercel (Frontend & Backend)
+Hosting: Vercel (Frontend and Backend)
 
 Key Features
 
-Authentication: JWT-based login/signup for users
+Authentication: JWT-based login and signup
 
 Profile Management: Update user profile details
 
-Real-time Chat: Send/receive messages instantly
+Real-Time Chat: Send and receive messages instantly
 
-User Status: Online/offline indicators
+User Status: Online and offline indicators
 
 Notifications: Real-time message alerts
 
@@ -69,6 +69,8 @@ PUT /user/update-profile – Update user profile (Authenticated User)
 
 GET /user/check – Check authentication (Authenticated User)
 
+GET /welcome – Get welcome info (Public)
+
 Message Routes
 
 GET /messages/users – Get list of users for sidebar (Authenticated User)
@@ -85,4 +87,4 @@ Frontend: Vercel
 
 Backend: Vercel
 
-Database: MongoDB Atlas
+Database: MongoDB Atla
