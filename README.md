@@ -1,90 +1,59 @@
-Yapster: A Real Time Chat Application
+# Yapster Real Time Chat Application
 
-Yapster is a real time chat application built with the MERN stack. It allows users to sign up, log in, update their profile, and chat with other users instantly.
+Yapster is a modern real time chat application built using the MERN stack. It enables users to communicate instantly with each other with secure authentication, real time presence tracking, media sharing and complete profile management. The application focuses on speed, reliability and a clean user experience across devices.
 
-Problem Statement
+## Problem Statement
 
-Traditional chat apps often suffer from delayed messaging, lack of user status tracking, and cumbersome profile management. Yapster addresses these issues by providing:
+Many traditional chat applications face issues such as delayed message delivery, absence of real time user presence, limited media support and inconvenient profile management. Yapster addresses these challenges by providing instant messaging, accurate online and offline status, seamless media sharing and an easy to use edit profile system.
 
-Seamless real-time messaging
+## System Architecture
 
-Secure user authentication
+The application follows a scalable architecture where the frontend communicates with a backend API which connects to the database and real time communication layer.
 
-Online and offline user status
+Frontend uses React.js with Tailwind CSS and React Router. Backend is built with Node.js and Express.js. Data is stored in MongoDB Atlas. Authentication is handled using JSON Web Tokens. Real time messaging and user presence are managed using Socket.io. Both frontend and backend are deployed on Vercel.
 
-Profile management
+## Key Features
 
-System Architecture
+1. Secure authentication using JWT based signup and login
+2. Dedicated edit profile page to update user details and profile image
+3. Real time one to one chat with instant message delivery
+4. Media sharing support within chat conversations
+5. Online and offline user status indicators in real time
+6. Message notifications and seen status handling
+7. Fully responsive design for desktop and mobile devices
 
-Frontend → Backend API → Database → Real-Time Communication
+## Tech Stack
 
-Frontend: React.js, Tailwind CSS, React Router
+Frontend technologies include React, Tailwind CSS and Axios. Backend is developed using Node.js and Express. MongoDB Atlas is used for database management. Authentication is implemented with JWT. Socket.io powers real time communication. Deployment is handled using Vercel.
 
-Backend: Node.js, Express.js
+## API Overview
 
-Database: MongoDB Atlas
+### User Routes
 
-Authentication: JWT-based login and signup
+POST /user/signup registers a new user
 
-Real-Time Communication: Socket.io
+POST /user/login authenticates an existing user
 
-Hosting: Vercel (Frontend and Backend)
+PUT /user/update-profile allows an authenticated user to update profile details
 
-Key Features
+GET /user/check verifies authentication status
 
-Authentication: JWT-based login and signup
+GET /welcome returns public welcome information
 
-Profile Management: Update user profile details
+### Message Routes
 
-Real-Time Chat: Send and receive messages instantly
+GET /messages/users fetches the user list for the chat sidebar
 
-User Status: Online and offline indicators
+GET /messages/:id retrieves messages for a specific conversation
 
-Notifications: Real-time message alerts
+PUT /messages/mark/:id marks messages as seen
 
-Responsive Design: Works seamlessly on desktop and mobile
+POST /messages/send/:id sends a text or media message
 
-Tech Stack
+## Deployment
 
-Frontend: React, Tailwind CSS, Axios
+Frontend is deployed on Vercel. Backend is deployed on Vercel. Database is hosted on MongoDB Atlas.
 
-Backend: Node.js, Express
+## Conclusion
 
-Database: MongoDB Atlas
-
-Authentication: JWT
-
-Real-Time Communication: Socket.io
-
-Hosting: Vercel
-
-API Overview
-User Routes
-
-POST /user/signup – Register a new user (Public)
-
-POST /user/login – Login user (Public)
-
-PUT /user/update-profile – Update user profile (Authenticated User)
-
-GET /user/check – Check authentication (Authenticated User)
-
-GET /welcome – Get welcome info (Public)
-
-Message Routes
-
-GET /messages/users – Get list of users for sidebar (Authenticated User)
-
-GET /messages/:id – Get messages of a conversation (Authenticated User)
-
-PUT /messages/mark/:id – Mark a message as seen (Authenticated User)
-
-POST /messages/send/:id – Send a message (Authenticated User)
-
-Deployment
-
-Frontend: Vercel
-
-Backend: Vercel
-
-Database: MongoDB Atla
+Yapster demonstrates real time communication, secure authentication and scalable full stack architecture. The project highlights practical implementation of Socket.io, JWT authentication and modern UI design, making it suitable for production use and strong for portfolio and resume projects.
