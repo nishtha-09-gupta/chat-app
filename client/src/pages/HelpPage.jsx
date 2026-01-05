@@ -48,7 +48,7 @@ const HelpPage = () => {
       </div>
 
       <p className="text-gray-500 text-sm mt-10 text-center">
-        Your comfort and safety matter the most.<br/>
+        Your comfort and safety matter the most to us.<br/>
         You’re never alone, we’re just one message away.
       </p>
     </div>
