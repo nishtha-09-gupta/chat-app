@@ -49,7 +49,7 @@ const HelpPage = () => {
 
       <p className="text-gray-500 text-sm mt-10 text-center">
         Your comfort and safety matter the most.<br/>
-        You’re never alone — we’re just one message away.
+        You’re never alone, we’re just one message away.
       </p>
     </div>
   )
