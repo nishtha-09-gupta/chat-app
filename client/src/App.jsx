@@ -13,6 +13,8 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-violet-900/90 to-black text-white">
+     
+
       <Toaster />
 
       <Routes>
